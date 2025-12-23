@@ -631,6 +631,8 @@ file's name."
   "Save FONTNAMES and FONTSIZES to current profile.
 When PROFILE-NAME is non-nil, save to this profile instead."
   (with-temp-buffer
+    (insert ";; -*- lexical-binding: t; -*-")
+    (insert "\n")
     (insert (concat
              ";; `cnfonts--custom-set-fontsnames' 结构"
              "与 `cnfonts--fontnames-fallback' 相同。"))
